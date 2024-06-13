@@ -79,130 +79,38 @@
             </div>
         </div>
 
-        
-<!--        <div class="row">-->
-<!--            <div class="col-md-4 col-md-offset-4 text-center">-->
-<!--                <ul class="nav nav-pills nav-justified">-->
-<!--                    <li>-->
-<!--                        <a href="https://arxiv.org/abs/2401.04181">-->
-<!--                            <image src="./img/paper.png" height="60px">-->
-<!--                                <h4><strong>Paper</strong></h4>-->
-<!--                            </a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="https://youtu.be/qe-z8Llmdt8">-->
-<!--                                <image src="img/youtube_icon.png" height="60px">-->
-<!--                                    <h4><strong>Video</strong></h4>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                                </ul>-->
-<!--                                -->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--        <div class="row">-->
-<!--            <div class="col-md-8 col-md-offset-2">-->
-<!--                                -->
-<!--                <h3>-->
-<!--                    Abstract-->
-<!--                </h3>-->
-<!--                <p class="text-justify">-->
-It is fundamentally challenging for robots to serve as useful assistants in human environments because this requires addressing a spectrum of sub-problems across robotics, including perception, language understanding, reasoning, and planning.
-%
-The recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated their exceptional abilities in solving complex mathematical problems, mastering commonsense and abstract reasoning.
-%
-This has led to the recent utilization of MLLMs as the "brain" in robotic systems, enabling these models to conduct high-level planning prior to triggering low-level control actions for task execution. However, it remains uncertain whether existing MLLMs are reliable in serving the brain role of robots.
-%
-In this study, we introduce the first benchmark for evaluating Multimodal LLM for Robotic (MMRo) benchmark, which tests the capability of MLLMs for robot applications.
-%
-Specifically, we identify four essential capabilities — perception, task planning, visual reasoning, and safety measurement — that MLLMs must possess to qualify as the robot's central processing unit.
-%
-We have developed several scenarios for each capability, resulting in a total of 14 metrics for evaluation.
-%
-We present experimental results for various MLLMs, including both commercial and open-source models, to assess the performance of existing systems.
-%
-Our findings indicate that no single model excels in all areas, suggesting that current MLLMs are not yet trustworthy enough to serve as the cognitive core for robots.Here is <a href="https://drive.google.com/open?id=1-1vRftbhobKwUFFo3_YxJ2eWoNuC4YFn&usp=drive_fs">data</a>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                                
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    It is fundamentally challenging for robots to serve as useful assistants in human environments because this requires addressing a spectrum of sub-problems across robotics, including perception, language understanding, reasoning, and planning. The recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated their exceptional abilities in solving complex mathematical problems, mastering commonsense and abstract reasoning. This has led to the recent utilization of MLLMs as the "brain" in robotic systems, enabling these models to conduct high-level planning prior to triggering low-level control actions for task execution. However, it remains uncertain whether existing MLLMs are reliable in serving the brain role of robots. In this study, we introduce the first benchmark for evaluating Multimodal LLM for Robotic (MMRo) benchmark, which tests the capability of MLLMs for robot applications. Specifically, we identify four essential capabilities — perception, task planning, visual reasoning, and safety measurement — that MLLMs must possess to qualify as the robot's central processing unit. We have developed several scenarios for each capability, resulting in a total of 14 metrics for evaluation.吗We present experimental results for various MLLMs, including both commercial and open-source models, to assess the performance of existing systems. Our findings indicate that no single model excels in all areas, suggesting that current MLLMs are not yet trustworthy enough to serve as the cognitive core for robots. The dataset is available at <a href="https://drive.google.com/open?id=1-1vRftbhobKwUFFo3_YxJ2eWoNuC4YFn&usp=drive_fs">Google Drive</a>
                 </p>
 
-<!--                <div class="text-center">-->
-<!--                    <video id="v0" width="90%" playsinline loop controls autoplay muted>-->
-<!--                        <source src="img/rfst_demo_v3.mp4" type="video/mp4">-->
-<!--                        </video>-->
-<!--                </div>-->
-<!--            -->
-<!--            </div>-->
-<!--        </div>-->
+            </div>
+        </div>
+
+
+
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
             	<br>
                 <h3>
-                    Framework
+                    Experiments
                 </h3>
- <p>
-        We introduce <strong>MMRo</strong> (<strong>M</strong>ultimodal <strong>M</strong>odel for <strong>Ro</strong>botics), the first diagnostic benchmark specifically designed to systematically dissect and analyze the diverse failure modes of MLLMs (Multimodal Large Language Models) in robotics.
-        <br>
-        MMRo includes approximately 13,159 meticulously crafted visual question-answer (VQA) pairs, featuring 850 images selected from open-access datasets and 284 images captured by human professionals in both generated and real-world settings.
-    </p>
+                <p class="text-justify">
+                We assess 13 models, including open-sourced and commercial MLLMs, on MMRo. 
+                </p>
+
                 <div class="text-center">
-                    <image src="img/dataste_view.png" width="100%">
+                    <image src="img/mmro_openended_all.pdf" width="100%">
                 </div>
 
 
-<!--            </div>-->
-<!--        </div>-->
 
-
-<!--        <div class="row">-->
-<!--            <div class="col-md-8 col-md-offset-2">-->
-<!--                <h3>-->
-<!--                    Experiments-->
-<!--                </h3>-->
-<!--		<p class="text-justify">-->
-<!--            We empirically assess the broad applicability of RFST across diverse tasks in both simulated and real-world settings. -->
-<!--		</p>-->
-
-<!--        <h4>-->
-<!--            Experiments on simulator-->
-<!--        </h4>-->
-<!--         <p class="text-justify">-->
-<!--            Success rates on VIMA-Bench over six tasks. The Tasks 1 and 2 belong to fast-thinking system, and Task 3-6 belong to slow-thinking system. -->
-<!--            Our proposed RFST significantly outperforms other methods in accomplishing slow-thinking tasks, achieving notably higher success rates.-->
-<!--        </p>-->
-
-<!--        <div class="text-center">-->
-<!--                    <image src="img/vima_bench_exp.png" width="80%">-->
-<!--            </div>-->
-
-<!--        <h4>-->
-<!--            Experiments on real world-->
-<!--        </h4>-->
-<!--        <p class="text-justify">-->
-<!--            The experiments on the real robot. Orange Bars: Slow-thinking tasks. Blue Bars: Fast-thinking tasks. -->
-<!--            RFST empowers real robots to execute complex tasks such as mathematical reasoning and intent recognition, -->
-<!--            which were traditionally beyond the scope of conventional robotic manipulation techniques.-->
-<!--        </p>-->
-
-<!--        <div class="text-center">-->
-<!--                <image src="img/real_exp.png" width="80%">-->
-<!--            </div>-->
-
-<!--	    </div>-->
-<!--        </div>-->
-            
-     <div class="col-md-8 col-md-offset-2">
-<!--                <h3>-->
-<!--                    Citation-->
-<!--                </h3>-->
-<!--                <div class="form-group col-md-10 col-md-offset-1">-->
-<!--                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">@article{zhu2024language,-->
-<!--title={Language-Conditioned Robotic Manipulation with Fast and Slow Thinking},-->
-<!--author={Zhu, Minjie and Zhu, Yichen and Li, Jinming and Wen, Junjie and Xu, Zhiyuan and Che, Zhengping and Shen, Chaomin and Peng, Yaxin and Liu, Dong and Feng, Feifei and others},-->
-<!--journal={arXiv preprint arXiv:2401.04181},-->
-<!--year={2024}-->
-<!--}</textarea>-->
-<!--            </div>-->
-<!--     </div>-->
 
 </body>
 </html>

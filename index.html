@@ -1,7 +1,207 @@
+
 <!DOCTYPE html>
 <html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Are Multimodal LLMs Eligible as the “Brain” for Robotics?</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta name="og:image" content="https://innermonologue.github.io/img/teaser.png" />
+    <meta property="og:image" content="https://innermonologue.github.io/img/teaser.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="900">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://inner-monologue.github.io/"/>
+    <meta property="og:title" content="Inner Monologue: Embodied Reasoning through Planning with Language Models." />
+    <meta property="og:description" content="Project page for Inner Monologue: Embodied Reasoning through Planning with Language Models" />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Inner Monologue: Embodied Reasoning through Planning with Language Models." />
+    <meta name="twitter:description" content="Project page for Project page for Inner Monologue: Embodied Reasoning through Planning with Language Models" />
+    <meta name="twitter:image" content="https://innermonologue.github.io/img/teaser.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>Are Multimodal LLMs Eligible as the “Brain” for Robotics?</br>
+                <!--<small>
+                    
+                </small>-->
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+               <ul class="list-inline">
+                <br>
+
+    <li>Jinming Li<sup>1,*</li> <li>Yichen Zhu<sup>2*</li> <li>Zhiyuan Xu<sup>2</li> <li>Jindong Gu<sup>1</li> <li>Ning Liu<sup>2</li> <li>Xin Liu<sup>2</li>
+        <br><br><li>Minjie Zhu<sup>2</li> <li>Ran Cheng<sup>3</li> <li>Tao Sun <sup>2</li><li>Yaxin Peng <sup>1</li> <li>Feifei Feng<sup>2</li> <li>Jian Tang<sup>2</li>
+                <br><br>
+                    <!-- <a href="http://g.co/robotics"> -->
+                    <!-- <img src="img/robotics-at-google.png" height="40px"> Robotics at Google</a> <br> -->
+                    <h5><sup>1</sup> Shanghai University, China</h5>
+                    <h5><sup>2</sup> Midea Group, China</h5>
+                    <h5><sup>3</sup> Midea Group, China</h5>
+<!--                    <h5> * Equal contribution. This work was done during Minjie Zhu, Jinming Li, and Junjie Wen’s internship at Midea Group.</h5>-->
+                </ul>
+            </div>
+        </div>
+
+        
+<!--        <div class="row">-->
+<!--            <div class="col-md-4 col-md-offset-4 text-center">-->
+<!--                <ul class="nav nav-pills nav-justified">-->
+<!--                    <li>-->
+<!--                        <a href="https://arxiv.org/abs/2401.04181">-->
+<!--                            <image src="./img/paper.png" height="60px">-->
+<!--                                <h4><strong>Paper</strong></h4>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="https://youtu.be/qe-z8Llmdt8">-->
+<!--                                <image src="img/youtube_icon.png" height="60px">-->
+<!--                                    <h4><strong>Video</strong></h4>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                                </ul>-->
+<!--                                -->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-8 col-md-offset-2">-->
+<!--                                -->
+<!--                <h3>-->
+<!--                    Abstract-->
+<!--                </h3>-->
+<!--                <p class="text-justify">-->
+It is fundamentally challenging for robots to serve as useful assistants in human environments because this requires addressing a spectrum of sub-problems across robotics, including perception, language understanding, reasoning, and planning.
+%
+The recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated their exceptional abilities in solving complex mathematical problems, mastering commonsense and abstract reasoning.
+%
+This has led to the recent utilization of MLLMs as the "brain" in robotic systems, enabling these models to conduct high-level planning prior to triggering low-level control actions for task execution. However, it remains uncertain whether existing MLLMs are reliable in serving the brain role of robots.
+%
+In this study, we introduce the first benchmark for evaluating Multimodal LLM for Robotic (MMRo) benchmark, which tests the capability of MLLMs for robot applications.
+%
+Specifically, we identify four essential capabilities — perception, task planning, visual reasoning, and safety measurement — that MLLMs must possess to qualify as the robot's central processing unit.
+%
+We have developed several scenarios for each capability, resulting in a total of 14 metrics for evaluation.
+%
+We present experimental results for various MLLMs, including both commercial and open-source models, to assess the performance of existing systems.
+%
+Our findings indicate that no single model excels in all areas, suggesting that current MLLMs are not yet trustworthy enough to serve as the cognitive core for robots.
+                </p>
+
+<!--                <div class="text-center">-->
+<!--                    <video id="v0" width="90%" playsinline loop controls autoplay muted>-->
+<!--                        <source src="img/rfst_demo_v3.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                </div>-->
+<!--            -->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            	<br>
+                <h3>
+                    Framework
+                </h3>
+ <p>
+        We introduce <strong>MMRo</strong> (<strong>M</strong>ultimodal <strong>M</strong>odel for <strong>Ro</strong>botics), the first diagnostic benchmark specifically designed to systematically dissect and analyze the diverse failure modes of MLLMs (Multimodal Large Language Models) in robotics.
+        <br>
+        MMRo includes approximately 13,159 meticulously crafted visual question-answer (VQA) pairs, featuring 850 images selected from open-access datasets and 284 images captured by human professionals in both generated and real-world settings.
+    </p>
+                <div class="text-center">
+                    <image src="img/dataste_view.png" width="100%">
+                </div>
+
+
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-8 col-md-offset-2">-->
+<!--                <h3>-->
+<!--                    Experiments-->
+<!--                </h3>-->
+<!--		<p class="text-justify">-->
+<!--            We empirically assess the broad applicability of RFST across diverse tasks in both simulated and real-world settings. -->
+<!--		</p>-->
+
+<!--        <h4>-->
+<!--            Experiments on simulator-->
+<!--        </h4>-->
+<!--         <p class="text-justify">-->
+<!--            Success rates on VIMA-Bench over six tasks. The Tasks 1 and 2 belong to fast-thinking system, and Task 3-6 belong to slow-thinking system. -->
+<!--            Our proposed RFST significantly outperforms other methods in accomplishing slow-thinking tasks, achieving notably higher success rates.-->
+<!--        </p>-->
+
+<!--        <div class="text-center">-->
+<!--                    <image src="img/vima_bench_exp.png" width="80%">-->
+<!--            </div>-->
+
+<!--        <h4>-->
+<!--            Experiments on real world-->
+<!--        </h4>-->
+<!--        <p class="text-justify">-->
+<!--            The experiments on the real robot. Orange Bars: Slow-thinking tasks. Blue Bars: Fast-thinking tasks. -->
+<!--            RFST empowers real robots to execute complex tasks such as mathematical reasoning and intent recognition, -->
+<!--            which were traditionally beyond the scope of conventional robotic manipulation techniques.-->
+<!--        </p>-->
+
+<!--        <div class="text-center">-->
+<!--                <image src="img/real_exp.png" width="80%">-->
+<!--            </div>-->
+
+<!--	    </div>-->
+<!--        </div>-->
+            
+     <div class="col-md-8 col-md-offset-2">
+<!--                <h3>-->
+<!--                    Citation-->
+<!--                </h3>-->
+<!--                <div class="form-group col-md-10 col-md-offset-1">-->
+<!--                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">@article{zhu2024language,-->
+<!--title={Language-Conditioned Robotic Manipulation with Fast and Slow Thinking},-->
+<!--author={Zhu, Minjie and Zhu, Yichen and Li, Jinming and Wen, Junjie and Xu, Zhiyuan and Che, Zhengping and Shen, Chaomin and Peng, Yaxin and Liu, Dong and Feng, Feifei and others},-->
+<!--journal={arXiv preprint arXiv:2401.04181},-->
+<!--year={2024}-->
+<!--}</textarea>-->
+<!--            </div>-->
+<!--     </div>-->
+
 </body>
 </html>
